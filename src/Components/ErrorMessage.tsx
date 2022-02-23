@@ -1,16 +1,13 @@
-// 04 implemnted useFormState
-import React, { useEffect } from "react";
+// 05 react hook error message
+import React from "react";
 import { useForm, useFormState } from "react-hook-form";
+import { ErrorMessage } from "@hookform/error-message";
 const Form: React.FC = () => {
   const {
     register,
     handleSubmit,
-    control,
+    formState: { errors },
   } = useForm({ defaultValues: { username: "", password: "" } });
-
-  // here we have used hook and in 01 we destructured from useForm  
-  // also we can pass name to get for particuler fields form state
-  const {errors,dirtyFields,isDirty,isSubmitSuccessful} = useFormState({ control: control });
 
   const onSubmit = (data) => {
     console.log(data);
@@ -37,11 +34,18 @@ const Form: React.FC = () => {
               })}
               className="p-2 outline-none border-2 rounded-md border-indigo-600"
             ></input>
-            {errors.username ? (
+            {/* {errors.username ? (
               <p className="text-red-600">{errors.username.message}</p>
             ) : (
               ""
-            )}
+            )} */}
+            <ErrorMessage
+              name="username"
+              errors={errors}
+              render={({ message }) => (
+                <p className="text-red-600">{message}</p>
+              )}
+            />
           </div>
 
           <div className="flex flex-col">

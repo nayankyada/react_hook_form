@@ -1,4 +1,4 @@
-// 01
+// 01 hook-form implemented simply
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 const Form: React.FC = () => {
