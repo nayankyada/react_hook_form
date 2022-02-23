@@ -1,3 +1,4 @@
+// 01
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 const Form: React.FC = () => {
@@ -14,7 +15,7 @@ const Form: React.FC = () => {
     setFocus,
     getFieldState,
     getValues,
-    formState: { errors, isSubmitSuccessful, isValid, isDirty },
+    formState: { errors, isSubmitSuccessful, isValid, isDirty,dirtyFields },
   } = useForm({ defaultValues: { username: "", password: "" } });
   const onSubmit = (data) => {
     console.log(data);
