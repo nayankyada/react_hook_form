@@ -8,7 +8,7 @@ const Index: React.FC = () => {
 
   return (
     <form onSubmit={handleSubmit((data) => console.log(data))}>
-      <ul>
+      <ul className="space-y-2">
         {fields.map((item, index) => (
           <li key={item.id} className="space-x-2">
             <input
