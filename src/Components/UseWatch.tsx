@@ -1,4 +1,4 @@
-// 03 implemented useWatch in child component by passing controller
+// 03 implemented useWatch in child component by passing controller to get parent form values in child component
 import React from "react";
 import { Controller, FieldValues, useForm, useWatch,Control } from "react-hook-form";
 import "antd/dist/antd.css";

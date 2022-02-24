@@ -26,7 +26,7 @@ const Form: React.FC = () => {
 
   // to watch all input
   useEffect(() => {
-    const d = watch((value) => console.log(value));
+    const d = watch((value) => console.log(value)); // it act as subscription so we have to unsubscribe
     return () => d.unsubscribe();
   }, [watch]);
 
