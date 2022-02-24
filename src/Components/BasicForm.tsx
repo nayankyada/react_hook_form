@@ -87,8 +87,9 @@ const Form: React.FC = () => {
             )}
           </div>
           <button
-            type="submit"
+            
             className="px-3 py-2 bg-indigo-500 rounded-md shadow-md text-white hover:bg-indigo-800"
+            type="submit"
           >
             Submit
           </button>
